@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "node server/index.js",
     "start": "node server/index.js",
+    "build": "npm run build:client",
     "build:client": "esbuild client/src/main.jsx --bundle --outfile=bundle.js --format=iife --loader:.js=jsx --loader:.jsx=jsx --minify"
   },
   "dependencies": {
