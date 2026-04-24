@@ -1,0 +1,22 @@
+{
+  "name": "online-internship-platform",
+  "version": "1.0.0",
+  "private": true,
+  "main": "server/index.js",
+  "scripts": {
+    "dev": "node server/index.js",
+    "start": "node server/index.js",
+    "build:client": "esbuild client/src/main.jsx --bundle --outfile=bundle.js --format=iife --loader:.js=jsx --loader:.jsx=jsx --minify"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.2",
+    "mongoose": "^8.9.5",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.3"
+  }
+}
