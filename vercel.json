@@ -1,0 +1,21 @@
+{
+  "version": 2,
+  "buildCommand": "npm install",
+  "devCommand": "node server/index.js",
+  "env": {
+    "MONGODB_URI": "@mongodb_uri",
+    "NODE_ENV": "production"
+  },
+  "functions": {
+    "server/index.js": {
+      "memory": 1024,
+      "maxDuration": 60
+    }
+  },
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "server/index.js"
+    }
+  ]
+}
