@@ -47,7 +47,8 @@ function App() {
   }, [profileFilter.status, profileFilter.domain]);
 
   async function api(path, options) {
-    const response = await fetch(path, {
+    const baseUrl = process.env.API_URL || '';
+    const response = await fetch(baseUrl + path, {
       headers: { 'Content-Type': 'application/json' },
       ...options
     });

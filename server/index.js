@@ -31,7 +31,8 @@ function buildClient() {
       '.jsx': 'jsx'
     },
     define: {
-      'process.env.NODE_ENV': '"production"'
+      'process.env.NODE_ENV': '"production"',
+      'process.env.API_URL': JSON.stringify(process.env.API_URL || `http://localhost:${port}`)
     }
   });
 }
